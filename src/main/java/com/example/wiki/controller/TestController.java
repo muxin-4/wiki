@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
 
 
-
     /**
      * GET, POST, PUT, DELETE
-     *
+     * <p>
      * /user?id=1
      * /user/1
+     *
      * @return
      */
     // @PostMapping
@@ -25,4 +25,8 @@ public class TestController {
     }
 
 
+    @PostMapping("/hello/post")
+    public String hello(String name) {
+        return "Hello World! Post," + name;
+    }
 }
