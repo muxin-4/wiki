@@ -1098,3 +1098,977 @@ java.nio.channels.AsynchronousCloseException: null
 2023-05-02 12:55:42.739 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
 2023-05-02 12:55:42.740 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
 2023-05-02 12:55:42.752 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2023-05-02 13:01:38.296 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2023-05-02 13:01:39.300 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:39.300 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:01:39.300 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:01:39.301 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:01:39.301 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-02 13:01:39.303 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:01:39.304 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:39.305 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:39.307 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2023-05-02 13:01:39.312 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2023-05-02 13:01:39.417 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:01:39.417 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:01:39.548 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:01:39.549 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:39.549 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:01:39.550 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:01:39.554 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:01:39.554 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 136 ms
+2023-05-02 13:01:39.640 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:01:39.646 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:39.647 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:01:39.650 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.252 seconds (JVM running for 1569.247)
+2023-05-02 13:01:39.651 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:01:39.652 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:01:39.652 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:01:41.056 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2023-05-02 13:01:42.060 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:42.060 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:01:42.060 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:01:42.060 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:01:42.063 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:42.064 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:42.145 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:01:42.145 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:01:42.258 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:01:42.258 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:42.258 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:01:42.258 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:01:42.263 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:01:42.263 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 116 ms
+2023-05-02 13:01:42.345 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:01:42.351 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:01:42.352 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:01:42.356 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.228 seconds (JVM running for 1571.952)
+2023-05-02 13:01:42.356 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:01:42.357 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:01:42.357 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:02:12.988 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:02:13.991 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:13.991 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:02:13.992 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:02:13.992 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:02:13.995 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:13.996 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:14.096 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:02:14.096 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:02:14.210 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:02:14.211 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:14.211 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:02:14.211 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:02:14.215 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:02:14.216 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 118 ms
+2023-05-02 13:02:14.248 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7b595d8a]
+2023-05-02 13:02:14.248 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:02:14.253 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-02 13:02:14.269 ERROR org.springframework.boot.SpringApplication        :821  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7b595d8a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.example.wiki.config.WikiApplication.main(WikiApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7b595d8a]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/example/wiki/service/EbookService;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.wiki.service.EbookService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 28 common frames omitted
+2023-05-02 13:02:32.832 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:02:32.833 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:02:32.950 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:02:32.951 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:32.951 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:02:32.951 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:02:32.955 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:02:32.955 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 121 ms
+2023-05-02 13:02:33.036 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:02:33.042 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:33.043 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:02:33.046 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.231 seconds (JVM running for 1622.662)
+2023-05-02 13:02:33.047 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:02:33.047 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:02:33.047 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:02:38.489 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:02:39.492 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:39.492 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:02:39.493 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:02:39.493 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:02:39.495 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:39.496 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:39.611 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:02:39.612 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:02:39.727 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:02:39.727 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:39.727 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:02:39.728 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:02:39.732 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:02:39.732 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 119 ms
+2023-05-02 13:02:39.808 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:02:39.813 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:39.814 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:02:39.817 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.223 seconds (JVM running for 1629.434)
+2023-05-02 13:02:39.818 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:02:39.818 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:02:39.818 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:02:45.267 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:02:46.270 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:46.270 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:02:46.270 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:02:46.273 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:02:46.277 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:46.278 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:46.350 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:02:46.351 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:02:46.459 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:02:46.460 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:02:46.460 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:02:46.461 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:02:46.465 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:02:46.465 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 113 ms
+2023-05-02 13:02:46.497 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@484e1b79]
+2023-05-02 13:02:46.497 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:02:46.501 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-02 13:02:46.503 ERROR org.springframework.boot.SpringApplication        :821  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@484e1b79]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.example.wiki.config.WikiApplication.main(WikiApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@484e1b79]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/example/wiki/service/EbookService;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.wiki.service.EbookService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 28 common frames omitted
+2023-05-02 13:03:30.301 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 526 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:03:30.301 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:03:30.418 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:03:30.419 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:03:30.419 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:03:30.419 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:03:30.424 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:03:30.424 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 121 ms
+2023-05-02 13:03:30.502 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:03:30.507 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:03:30.509 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:03:30.512 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.227 seconds (JVM running for 1680.13)
+2023-05-02 13:03:30.513 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:03:30.513 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:03:30.513 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:04:18.838 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-02 13:04:18.839 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-05-02 13:04:18.839 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2023-05-02 13:04:18.843 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-3 - Starting...
+2023-05-02 13:04:18.854 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-3 - Start completed.
+2023-05-02 13:04:33.211 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2023-05-02 13:04:33.235 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2023-05-02 13:04:34.998 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 3010 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:04:34.999 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:04:35.031 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-02 13:04:35.031 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-02 13:04:35.709 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:04:35.715 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:04:35.715 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:04:35.716 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:04:35.758 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:04:35.758 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 726 ms
+2023-05-02 13:04:36.212 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:04:36.223 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:04:36.242 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:04:36.251 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 1.547 seconds (JVM running for 2.339)
+2023-05-02 13:04:36.253 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:04:36.253 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:04:37.917 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-02 13:04:37.917 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-05-02 13:04:37.918 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-05-02 13:04:37.956 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-05-02 13:04:38.198 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-05-02 13:06:29.120 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-05-02 13:06:29.137 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-05-02 13:06:31.793 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:06:31.794 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:06:31.830 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-02 13:06:31.830 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-02 13:06:32.510 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:06:32.515 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:06:32.515 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:06:32.516 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:06:32.553 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:06:32.553 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 722 ms
+2023-05-02 13:06:32.992 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:06:33.004 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:06:33.023 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:06:33.031 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 1.54 seconds (JVM running for 1.928)
+2023-05-02 13:06:33.033 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:06:33.033 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:06:47.805 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-02 13:06:47.806 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-05-02 13:06:47.807 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-05-02 13:06:47.855 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2023-05-02 13:06:48.101 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2023-05-02 13:08:24.308 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-02 13:08:25.315 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:25.316 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:08:25.317 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:08:25.316 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:08:25.318 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-02 13:08:25.320 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:08:25.321 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:25.323 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:25.326 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2023-05-02 13:08:25.345 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2023-05-02 13:08:25.445 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:08:25.445 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:08:25.591 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:08:25.591 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:25.591 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:08:25.592 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:08:25.597 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:08:25.597 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 150 ms
+2023-05-02 13:08:25.709 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:08:25.716 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:25.717 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:08:25.721 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.3 seconds (JVM running for 114.614)
+2023-05-02 13:08:25.722 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:08:25.723 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:08:25.723 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:08:44.253 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:08:45.256 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:45.256 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:08:45.257 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:08:45.257 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:08:45.260 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:45.262 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:45.390 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:08:45.390 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:08:45.529 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:08:45.529 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:45.530 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:08:45.530 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:08:45.536 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:08:45.536 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 144 ms
+2023-05-02 13:08:45.630 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:08:45.636 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:08:45.637 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:08:45.641 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.281 seconds (JVM running for 134.534)
+2023-05-02 13:08:45.642 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:08:45.642 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:08:45.642 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:09:04.187 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-02 13:09:05.192 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:05.192 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:09:05.193 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:09:05.193 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:09:05.196 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:05.198 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:05.316 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:09:05.316 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:09:05.438 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:09:05.438 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:05.438 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:09:05.438 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:09:05.443 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:09:05.443 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 125 ms
+2023-05-02 13:09:05.536 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:09:05.543 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:05.545 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:09:05.549 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.254 seconds (JVM running for 154.441)
+2023-05-02 13:09:05.550 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:09:05.551 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:09:05.551 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:09:35.177 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:09:36.180 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:36.180 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:09:36.181 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:09:36.181 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:09:36.184 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:36.186 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:36.264 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:09:36.264 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:09:36.370 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:09:36.370 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:36.370 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:09:36.370 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:09:36.374 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:09:36.374 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 108 ms
+2023-05-02 13:09:36.454 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:09:36.460 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:36.461 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:09:36.464 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.218 seconds (JVM running for 185.355)
+2023-05-02 13:09:36.465 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:09:36.465 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:09:36.465 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:09:51.394 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2023-05-02 13:09:52.397 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:52.397 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:09:52.397 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:09:52.398 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:09:52.400 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:52.401 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:52.461 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:09:52.462 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:09:52.580 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:09:52.581 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:09:52.581 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:09:52.581 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:09:52.586 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:09:52.586 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 123 ms
+2023-05-02 13:09:52.619 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1fe106fb]
+2023-05-02 13:09:52.619 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:09:52.624 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-02 13:09:52.638 ERROR org.springframework.boot.SpringApplication        :821  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1fe106fb]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.example.wiki.config.WikiApplication.main(WikiApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1fe106fb]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/example/wiki/service/EbookService;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.wiki.service.EbookService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 28 common frames omitted
+2023-05-02 13:10:02.548 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:10:02.548 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:10:02.662 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:10:02.662 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:10:02.663 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:10:02.663 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:10:02.667 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:10:02.667 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 117 ms
+2023-05-02 13:10:02.747 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:10:02.752 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:10:02.753 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:10:02.756 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.226 seconds (JVM running for 211.647)
+2023-05-02 13:10:02.757 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:10:02.758 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:10:02.758 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:10:08.837 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-02 13:10:08.837 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-05-02 13:10:08.838 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2023-05-02 13:10:08.848 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2023-05-02 13:10:08.861 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2023-05-02 13:15:46.238 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-02 13:15:47.242 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:15:47.242 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:15:47.242 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:15:47.243 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:15:47.244 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-02 13:15:47.247 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:15:47.248 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:15:47.249 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:15:47.250 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2023-05-02 13:15:47.256 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2023-05-02 13:15:47.383 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:15:47.384 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:15:47.504 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:15:47.505 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:15:47.505 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:15:47.505 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:15:47.510 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:15:47.510 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 125 ms
+2023-05-02 13:15:47.601 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:15:47.607 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:15:47.608 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:15:47.611 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.254 seconds (JVM running for 556.491)
+2023-05-02 13:15:47.612 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:15:47.612 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:15:47.612 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:16:21.318 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:16:22.322 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:22.322 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:16:22.322 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:16:22.322 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:16:22.325 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:22.326 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:22.425 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:16:22.425 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:16:22.539 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:16:22.539 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:22.539 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:16:22.540 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:16:22.544 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:16:22.544 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 117 ms
+2023-05-02 13:16:22.626 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:16:22.631 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:22.632 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:16:22.636 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.228 seconds (JVM running for 591.515)
+2023-05-02 13:16:22.637 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:16:22.637 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:16:22.637 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:16:37.154 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-02 13:16:38.157 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:38.157 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:16:38.157 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:16:38.158 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:16:38.162 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:38.163 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:38.234 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:16:38.234 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:16:38.344 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:16:38.344 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:38.344 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:16:38.344 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:16:38.348 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:16:38.348 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 113 ms
+2023-05-02 13:16:38.430 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:16:38.435 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:38.437 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:16:38.439 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.224 seconds (JVM running for 607.318)
+2023-05-02 13:16:38.440 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:16:38.441 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:16:38.441 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:16:53.968 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:16:54.972 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:54.972 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:16:54.972 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:16:54.973 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:16:54.974 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:54.976 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:55.050 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:16:55.050 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:16:55.162 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:16:55.163 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:16:55.163 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:16:55.163 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:16:55.167 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:16:55.167 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 116 ms
+2023-05-02 13:16:55.197 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@75feb42a]
+2023-05-02 13:16:55.197 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:16:55.201 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-02 13:16:55.203 ERROR org.springframework.boot.SpringApplication        :821  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/wangguanyu/wgy/09_github/wiki/target/classes/com/example/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@75feb42a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.example.wiki.config.WikiApplication.main(WikiApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@75feb42a]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:743)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:675)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/example/wiki/service/EbookService;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:738)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.wiki.service.EbookService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 28 common frames omitted
+2023-05-02 13:25:08.646 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:25:08.646 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:25:08.759 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:25:08.759 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:08.759 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:25:08.759 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:25:08.764 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:25:08.764 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 116 ms
+2023-05-02 13:25:08.843 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:25:08.849 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:08.850 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:25:08.853 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.224 seconds (JVM running for 1117.746)
+2023-05-02 13:25:08.854 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:25:08.854 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:25:08.854 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:25:28.399 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:25:29.403 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:29.403 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:25:29.403 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:25:29.403 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:25:29.405 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:29.406 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:29.490 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:25:29.490 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:25:29.604 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:25:29.604 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:29.605 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:25:29.605 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:25:29.610 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:25:29.610 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 119 ms
+2023-05-02 13:25:29.744 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:25:29.750 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:29.751 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:25:29.754 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.282 seconds (JVM running for 1138.646)
+2023-05-02 13:25:29.755 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:25:29.755 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:25:29.755 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:25:35.589 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-02 13:25:36.593 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:36.593 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:25:36.593 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:25:36.594 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:25:36.597 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:36.599 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:36.658 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:25:36.658 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:25:36.773 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:25:36.774 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:36.774 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:25:36.774 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:25:36.779 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:25:36.779 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 120 ms
+2023-05-02 13:25:36.860 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:25:36.866 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:36.867 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:25:36.870 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.228 seconds (JVM running for 1145.762)
+2023-05-02 13:25:36.871 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:25:36.871 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:25:36.871 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:25:44.314 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:25:45.318 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:45.318 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:25:45.319 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:25:45.319 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:25:45.323 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:45.325 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:45.389 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:25:45.390 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:25:45.495 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:25:45.495 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:45.495 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:25:45.495 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:25:45.499 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:25:45.499 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 108 ms
+2023-05-02 13:25:45.573 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:25:45.578 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:25:45.579 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:25:45.582 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.209 seconds (JVM running for 1154.474)
+2023-05-02 13:25:45.583 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:25:45.583 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:25:45.583 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:26:08.159 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:26:09.164 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:26:09.164 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:26:09.164 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:26:09.165 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:26:09.168 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:26:09.169 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:26:09.254 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:26:09.255 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:26:09.377 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:26:09.378 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:26:09.378 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:26:09.378 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:26:09.382 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:26:09.383 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 127 ms
+2023-05-02 13:26:09.463 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:26:09.468 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:26:09.469 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:26:09.472 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.237 seconds (JVM running for 1178.363)
+2023-05-02 13:26:09.473 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:26:09.473 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:26:09.473 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:36:10.841 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:36:11.846 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:11.846 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:36:11.846 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:36:11.847 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:36:11.852 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:11.854 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:12.009 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:36:12.009 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:36:12.170 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:36:12.171 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:12.172 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:36:12.172 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:36:12.177 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:36:12.177 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 167 ms
+2023-05-02 13:36:12.266 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:36:12.272 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:12.273 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:36:12.277 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.287 seconds (JVM running for 1781.171)
+2023-05-02 13:36:12.278 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:36:12.278 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:36:12.278 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:36:13.682 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-02 13:36:14.686 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:14.686 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:36:14.687 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:36:14.687 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:36:14.691 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:14.691 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:14.754 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:36:14.754 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:36:14.862 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:36:14.862 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:14.863 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:36:14.863 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:36:14.867 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:36:14.867 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 111 ms
+2023-05-02 13:36:14.960 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:36:14.965 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:14.966 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:36:14.969 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.229 seconds (JVM running for 1783.864)
+2023-05-02 13:36:14.970 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:36:14.971 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:36:14.971 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:36:20.408 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-02 13:36:21.411 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:21.411 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:36:21.412 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:36:21.412 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:36:21.414 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:21.415 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:21.504 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:36:21.504 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:36:21.613 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:36:21.613 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:21.613 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:36:21.613 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:36:21.618 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:36:21.618 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 112 ms
+2023-05-02 13:36:21.696 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:36:21.702 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:21.703 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:36:21.706 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.217 seconds (JVM running for 1790.6)
+2023-05-02 13:36:21.706 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:36:21.707 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:36:21.707 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:36:23.110 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2023-05-02 13:36:24.114 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:24.114 ERROR org.apache.tomcat.util.net.Acceptor               :175  [32m                  [0;39m Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:750)
+2023-05-02 13:36:24.115 WARN  org.apache.tomcat.util.net.NioEndpoint            :173  [32m                  [0;39m Failed to unlock acceptor for [http-nio-8881] because the local address was not available
+2023-05-02 13:36:24.116 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2023-05-02 13:36:24.120 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:24.121 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:24.196 INFO  com.example.wiki.config.WikiApplication           :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_351 on wangguanyudeMacBook-Pro.local with PID 17117 (/Users/wangguanyu/wgy/09_github/wiki/target/classes started by wangguanyu in /Users/wangguanyu/wgy/09_github/wiki)
+2023-05-02 13:36:24.196 INFO  com.example.wiki.config.WikiApplication           :631  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2023-05-02 13:36:24.306 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8881 (http)
+2023-05-02 13:36:24.306 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:24.307 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2023-05-02 13:36:24.307 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-02 13:36:24.311 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2023-05-02 13:36:24.311 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 114 ms
+2023-05-02 13:36:24.387 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2023-05-02 13:36:24.392 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8881"]
+2023-05-02 13:36:24.393 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8881 (http) with context path ''
+2023-05-02 13:36:24.396 INFO  com.example.wiki.config.WikiApplication           :61   [32m                  [0;39m Started WikiApplication in 0.215 seconds (JVM running for 1793.29)
+2023-05-02 13:36:24.397 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2023-05-02 13:36:24.397 INFO  com.example.wiki.config.WikiApplication           :21   [32m                  [0;39m 启动成功！！
+2023-05-02 13:36:24.398 INFO  com.example.wiki.config.WikiApplication           :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8881
+2023-05-02 13:36:33.522 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-02 13:36:33.522 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2023-05-02 13:36:33.523 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2023-05-02 13:36:33.529 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-3 - Starting...
+2023-05-02 13:36:33.541 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-3 - Start completed.
