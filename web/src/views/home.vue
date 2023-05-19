@@ -150,10 +150,8 @@ export default defineComponent({
       axios
         .get("/ebook/list", {
           params: {
-            name: "Spring",
-            // page: 1,
-            // size: 1000,
-            // categoryId2: categoryId2,
+            page: 1,
+            size: 10,
           },
         })
         .then((response) => {
