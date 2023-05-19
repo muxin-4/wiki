@@ -4,9 +4,11 @@ import com.example.wiki.domain.Ebook;
 import com.example.wiki.domain.EbookExample;
 import com.example.wiki.mapper.EbookMapper;
 import com.example.wiki.req.EbookQueryReq;
+import com.example.wiki.req.EbookSaveReq;
 import com.example.wiki.resp.EbookQueryResp;
 import com.example.wiki.resp.PageResp;
 import com.example.wiki.util.CopyUtil;
+import com.example.wiki.util.SnowFlake;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
@@ -27,6 +29,9 @@ public class EbookService {
     @Resource
     @Autowired
     private EbookMapper ebookMapper;
+
+    @Resource
+    private SnowFlake snowFlake;
 
     public PageResp<EbookQueryResp> list(EbookQueryReq req) {
         EbookExample ebookExample = new EbookExample();
@@ -52,5 +57,24 @@ public class EbookService {
         pageResp.setList(list);
 
         return pageResp;
+    }
+
+    /**
+     * 保存
+     */
+    public void save(EbookSaveReq req) {
+        Ebook ebook = CopyUtil.copy(req, Ebook.class);
+        if (ObjectUtils.isEmpty(req.getId())) {
+            // 新增
+            ebook.setId(snowFlake.nextId());
+            ebookMapper.insert(ebook);
+        } else {
+            // 更新
+            ebookMapper.updateByPrimaryKey(ebook);
+        }
+    }
+
+    public void delete(Long id) {
+        ebookMapper.deleteByPrimaryKey(id);
     }
 }
