@@ -151,7 +151,7 @@ export default defineComponent({
         .get("/ebook/list", {
           params: {
             page: 1,
-            size: 1001,
+            size: 10,
           },
         })
         .then((response) => {
