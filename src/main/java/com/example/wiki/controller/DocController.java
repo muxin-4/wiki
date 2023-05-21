@@ -2,14 +2,15 @@ package com.example.wiki.controller;
 
 import com.example.wiki.req.DocQueryReq;
 import com.example.wiki.req.DocSaveReq;
-import com.example.wiki.resp.CommonResp;
 import com.example.wiki.resp.DocQueryResp;
+import com.example.wiki.resp.CommonResp;
 import com.example.wiki.resp.PageResp;
 import com.example.wiki.service.DocService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -42,11 +43,26 @@ public class DocController {
         return resp;
     }
 
+    @DeleteMapping("/delete/{idsStr}")
+    public CommonResp delete(@PathVariable String idsStr) {
+        CommonResp resp = new CommonResp<>();
+        List<String> list = Arrays.asList(idsStr.split(","));
+        docService.delete(list);
+        return resp;
+    }
+
     @GetMapping("/find-content/{id}")
     public CommonResp findContent(@PathVariable Long id) {
         CommonResp<String> resp = new CommonResp<>();
         String content = docService.findContent(id);
         resp.setContent(content);
         return resp;
+    }
+
+    @GetMapping("/vote/{id}")
+    public CommonResp vote(@PathVariable Long id) {
+        CommonResp commonResp = new CommonResp();
+        docService.vote(id);
+        return commonResp;
     }
 }
